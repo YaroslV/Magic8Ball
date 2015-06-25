@@ -1,0 +1,28 @@
+﻿<Window x:Class="MyFreeTime.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="291">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Top" >
+            <MenuItem Header="_File">
+                <MenuItem Header="_Exit" HorizontalAlignment="Left" Width="145"                         
+                          Click="MenuItem_Click">
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid DockPanel.Dock="Left" Background="Bisque" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="187*"/>
+                <RowDefinition Height="112*"/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="1" Name="textBox" Grid.ColumnSpan="2" Margin="50,24,46,19" KeyDown="KeyPressed"/>
+            <TextBlock Name="messageBoard" Grid.Column="0" Grid.Row="0" Background="AliceBlue" Grid.ColumnSpan="2" Margin="0,0,78,0" ScrollViewer.CanContentScroll="True"/>
+
+        </Grid>
+
+    </DockPanel>
+</Window>
